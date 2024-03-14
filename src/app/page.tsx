@@ -13,8 +13,6 @@ import OfferMessage from "@/components/messages-template/OfferMessage";
 import ProjectsMessage from "@/components/messages-template/ProjectsMessage";
 import WelcomeMessage from "@/components/messages-template/WelcomeMessage";
 
-const audio = new Audio("./sound.mp3");
-
 const exampleMessages = ["Pokaż swoje realizacje", "Powiedz mi coś o sobie", "Jaki jest twój e-mail?", "Jaka jest twoja oferta?", "Powiedz mi coś o sobie"]
 
 const aliases = [
@@ -112,6 +110,7 @@ export default function Home() {
     }, [messages]);
 
     const playSound = () => {
+        const audio = new Audio("./sound.mp3");
         audio.play().catch((error) => console.error("Error playing the sound:", error));
     };
 
