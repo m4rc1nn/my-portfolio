@@ -21,9 +21,9 @@ export default function InputMessage({
         <div className="w-full">
             <div className="flex items-center flex-col p-2 bg-gray-50 dark:bg-gray-700 relative">
                 <div className="flex items-start justify-start flex-nowrap w-full overflow-scroll">
-                    {messageTemplates.map((tm: string) => {
+                    {messageTemplates.map((tm: string, index: number) => {
                         return (
-                            <span onClick={() => handleClickTemplateMessage(tm)} className="mr-2 bg-gray-100 text-gray-800 text-sm px-2.5 py-0.5 rounded-full dark:bg-gray-800 dark:text-gray-300 opacity-75 whitespace-nowrap hover:cursor-pointer">
+                            <span key={index} onClick={() => handleClickTemplateMessage(tm)} className="mr-2 bg-gray-100 text-gray-800 text-sm px-2.5 py-0.5 rounded-full dark:bg-gray-800 dark:text-gray-300 opacity-75 whitespace-nowrap hover:cursor-pointer">
                                 {tm}
                             </span>
                         );
