@@ -18,7 +18,7 @@ export default function MessageBox({ message }: { message: Message }) {
             <div className="w-full flex items-start gap-2.5 mt-2">
                 <Image
                     className="w-8 h-8 rounded-full"
-                    src="/my-portfolio/me.png"
+                    src="https://raw.githubusercontent.com/m4rc1nn/my-portfolio/main/public/me.png"
                     width={32}
                     height={42}
                     alt="Marcin image"

@@ -67,7 +67,7 @@ export default function Home() {
                     <FirstMessage />
                 ),
                 plainText:
-                    "Moje portfolio działa w oparciu o sztuczną inteligincję. Wpisz którąs z komend i kontynuujmy konwersacje.",
+                    "Moje portfolio działa w oparciu o sztuczną inteligincję. Wpisz którąś z komend i kontynuujmy konwersacje.",
             },
         ]);
         playSound();
@@ -78,7 +78,6 @@ export default function Home() {
         const lastMessage = messages[messages.length - 1];
         if (lastMessage.type === MessageType.CLIENT) {
             setResponding(true);
-            // Normalize the input message
             const normalizedInputMessage = lastMessage.plainText
                 .toLowerCase()
                 .normalize("NFD")
@@ -91,7 +90,6 @@ export default function Home() {
                 .replace(/ż/g, "z")
                 .replace(/ł/g, "l")
                 .replace(/ó/g, "o");
-            // Find the matching alias
             const about = aliases.find((alias) => {
                 return normalizedInputMessage.includes(alias.main) ||
                     alias.alias.some((x) => {
